@@ -1,40 +1,45 @@
 extends index
+
+block content
+	//
+		*** TOPBAR ***
+		_________________________________________________________
 	#top
-			.container
-				.col-md-6.offer(data-animate='fadeInDown')
-					a.btn.btn-success.btn-sm(href='#', data-animate-hover='shake') Offer of the day
-					a(href='#') Get flat 35% off on orders over $50!
-				.col-md-6(data-animate='fadeInDown')
-					ul.menu
-						li
-							a(href='#', data-toggle='modal', data-target='#login-modal') Login
-						li
-							a(href='register.html') Register
-						li
-							a(href='contact.html') Contact
-						li
-							a(href='#') Recently viewed
-			#login-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='Login', aria-hidden='true')
-				.modal-dialog.modal-sm
-					.modal-content
-						.modal-header
-							button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
-							h4#Login.modal-title Customer login
-						.modal-body
-							form(action='customer-orders.html', method='post')
-								.form-group
-									input#email-modal.form-control(type='text', placeholder='email')
-								.form-group
-									input#password-modal.form-control(type='password', placeholder='password')
-								p.text-center
-									button.btn.btn-primary
-										i.fa.fa-sign-in
-										|  Log in
-							p.text-center.text-muted Not registered yet?
-							p.text-center.text-muted
-								a(href='register.html')
-									strong Register now
-								| ! It is easy and done in 1 minute and gives you access to special discounts and much more!
+		.container
+			.col-md-6.offer(data-animate='fadeInDown')
+				a.btn.btn-success.btn-sm(href='#', data-animate-hover='shake') Offer of the day
+				a(href='#') Get flat 35% off on orders over $50!
+			.col-md-6(data-animate='fadeInDown')
+				ul.menu
+					li
+						a(href='#', data-toggle='modal', data-target='#login-modal') Login
+					li
+						a(href='register.html') Register
+					li
+						a(href='contact.html') Contact
+					li
+						a(href='#') Recently viewed
+		#login-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='Login', aria-hidden='true')
+			.modal-dialog.modal-sm
+				.modal-content
+					.modal-header
+						button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+						h4#Login.modal-title Customer login
+					.modal-body
+						form(action='customer-orders.html', method='post')
+							.form-group
+								input#email-modal.form-control(type='text', placeholder='email')
+							.form-group
+								input#password-modal.form-control(type='password', placeholder='password')
+							p.text-center
+								button.btn.btn-primary
+									i.fa.fa-sign-in
+									|  Log in
+						p.text-center.text-muted Not registered yet?
+						p.text-center.text-muted
+							a(href='register.html')
+								strong Register now
+							| ! It is easy and done in 1 minute and gives you access to special discounts and much more!
 	// *** TOP BAR END ***
 	//
 		*** NAVBAR ***
