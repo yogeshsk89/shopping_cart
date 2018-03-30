@@ -13,11 +13,11 @@ html(lang='en')
 		meta(name='keywords', content='')
 		link(href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100', rel='stylesheet', type='text/css')
 		// styles
-		link(href='css/font-awesome.css', rel='stylesheet')
-		link(href='css/bootstrap.min.css', rel='stylesheet')
-		link(href='css/animate.min.css', rel='stylesheet')
-		link(href='css/owl.carousel.css', rel='stylesheet')
-		link(href='css/owl.theme.css', rel='stylesheet')
+		link(href='/css/font-awesome.css', rel='stylesheet')
+		link(href='/css/bootstrap.min.css', rel='stylesheet')
+		link(href='/css/animate.min.css', rel='stylesheet')
+		link(href='/css/owl.carousel.css', rel='stylesheet')
+		link(href='/css/owl.theme.css', rel='stylesheet')
 		// theme stylesheet
 		link#theme-stylesheet(href='css/style.default.css', rel='stylesheet')
 		// your stylesheet with modifications
@@ -25,5 +25,431 @@ html(lang='en')
 		script(src='js/respond.min.js')
 		link(rel='shortcut icon', href='favicon.png')
 	body
-		block content
 		extends header
+		#all
+			#content
+				.container
+					.col-md-12
+						#main-slider
+							.item
+								img.img-responsive(src='img/main-slider1.jpg', alt='')
+							.item
+								img.img-responsive(src='img/main-slider2.jpg', alt='')
+							.item
+								img.img-responsive(src='img/main-slider3.jpg', alt='')
+							.item
+								img.img-responsive(src='img/main-slider4.jpg', alt='')
+						// /#main-slider
+				//
+					*** ADVANTAGES HOMEPAGE ***
+					_________________________________________________________
+				#advantages
+					.container
+						.same-height-row
+							.col-sm-4
+								.box.same-height.clickable
+									.icon
+										i.fa.fa-heart
+									h3
+										a(href='#') We love our customers
+									p We are known to provide best possible service ever
+							.col-sm-4
+								.box.same-height.clickable
+									.icon
+										i.fa.fa-tags
+									h3
+										a(href='#') Best prices
+									p
+										| You can check that the height of the boxes adjust when longer text like this one is used in one of them.
+							.col-sm-4
+								.box.same-height.clickable
+									.icon
+										i.fa.fa-thumbs-up
+									h3
+										a(href='#') 100% satisfaction guaranteed
+									p Free returns on everything for 3 months.
+						// /.row
+					// /.container
+				// /#advantages
+				// *** ADVANTAGES END ***
+				//
+					*** HOT PRODUCT SLIDESHOW ***
+					_________________________________________________________
+				#hot
+					.box
+						.container
+							.col-md-12
+								h2 Hot this week
+					.container
+						.product-slider
+							.item
+								.product
+									.flip-container
+										.flipper
+											.front
+												a(href='detail.html')
+													img.img-responsive(src='img/product1.jpg', alt='')
+											.back
+												a(href='detail.html')
+													img.img-responsive(src='img/product1_2.jpg', alt='')
+									a.invisible(href='detail.html')
+										img.img-responsive(src='img/product1.jpg', alt='')
+									.text
+										h3
+											a(href='detail.html') Fur coat with very but very very long name
+										p.price $143.00
+									// /.text
+								// /.product
+							.item
+								.product
+									.flip-container
+										.flipper
+											.front
+												a(href='detail.html')
+													img.img-responsive(src='img/product2.jpg', alt='')
+											.back
+												a(href='detail.html')
+													img.img-responsive(src='img/product2_2.jpg', alt='')
+									a.invisible(href='detail.html')
+										img.img-responsive(src='img/product2.jpg', alt='')
+									.text
+										h3
+											a(href='detail.html') White Blouse Armani
+										p.price
+											del $280
+											|  $143.00
+									// /.text
+									.ribbon.sale
+										.theribbon SALE
+										.ribbon-background
+									// /.ribbon
+									.ribbon.new
+										.theribbon NEW
+										.ribbon-background
+									// /.ribbon
+									.ribbon.gift
+										.theribbon GIFT
+										.ribbon-background
+									// /.ribbon
+								// /.product
+							.item
+								.product
+									.flip-container
+										.flipper
+											.front
+												a(href='detail.html')
+													img.img-responsive(src='img/product3.jpg', alt='')
+											.back
+												a(href='detail.html')
+													img.img-responsive(src='img/product3_2.jpg', alt='')
+									a.invisible(href='detail.html')
+										img.img-responsive(src='img/product3.jpg', alt='')
+									.text
+										h3
+											a(href='detail.html') Black Blouse Versace
+										p.price $143.00
+									// /.text
+								// /.product
+							.item
+								.product
+									.flip-container
+										.flipper
+											.front
+												a(href='detail.html')
+													img.img-responsive(src='img/product3.jpg', alt='')
+											.back
+												a(href='detail.html')
+													img.img-responsive(src='img/product3_2.jpg', alt='')
+									a.invisible(href='detail.html')
+										img.img-responsive(src='img/product3.jpg', alt='')
+									.text
+										h3
+											a(href='detail.html') Black Blouse Versace
+										p.price $143.00
+									// /.text
+								// /.product
+							.item
+								.product
+									.flip-container
+										.flipper
+											.front
+												a(href='detail.html')
+													img.img-responsive(src='img/product2.jpg', alt='')
+											.back
+												a(href='detail.html')
+													img.img-responsive(src='img/product2_2.jpg', alt='')
+									a.invisible(href='detail.html')
+										img.img-responsive(src='img/product2.jpg', alt='')
+									.text
+										h3
+											a(href='detail.html') White Blouse Versace
+										p.price $143.00
+									// /.text
+									.ribbon.new
+										.theribbon NEW
+										.ribbon-background
+									// /.ribbon
+								// /.product
+							.item
+								.product
+									.flip-container
+										.flipper
+											.front
+												a(href='detail.html')
+													img.img-responsive(src='img/product1.jpg', alt='')
+											.back
+												a(href='detail.html')
+													img.img-responsive(src='img/product1_2.jpg', alt='')
+									a.invisible(href='detail.html')
+										img.img-responsive(src='img/product1.jpg', alt='')
+									.text
+										h3
+											a(href='detail.html') Fur coat
+										p.price $143.00
+									// /.text
+									.ribbon.gift
+										.theribbon GIFT
+										.ribbon-background
+									// /.ribbon
+								// /.product
+							// /.col-md-4
+							.item
+								.product
+									.flip-container
+										.flipper
+											.front
+												a(href='detail.html')
+													img.img-responsive(src='img/product2.jpg', alt='')
+											.back
+												a(href='detail.html')
+													img.img-responsive(src='img/product2_2.jpg', alt='')
+									a.invisible(href='detail.html')
+										img.img-responsive(src='img/product2.jpg', alt='')
+									.text
+										h3
+											a(href='detail.html') White Blouse Armani
+										p.price
+											del $280
+											|  $143.00
+									// /.text
+									.ribbon.sale
+										.theribbon SALE
+										.ribbon-background
+									// /.ribbon
+									.ribbon.new
+										.theribbon NEW
+										.ribbon-background
+									// /.ribbon
+									.ribbon.gift
+										.theribbon GIFT
+										.ribbon-background
+									// /.ribbon
+								// /.product
+							.item
+								.product
+									.flip-container
+										.flipper
+											.front
+												a(href='detail.html')
+													img.img-responsive(src='img/product3.jpg', alt='')
+											.back
+												a(href='detail.html')
+													img.img-responsive(src='img/product3_2.jpg', alt='')
+									a.invisible(href='detail.html')
+										img.img-responsive(src='img/product3.jpg', alt='')
+									.text
+										h3
+											a(href='detail.html') Black Blouse Versace
+										p.price $143.00
+									// /.text
+								// /.product
+						// /.product-slider
+					// /.container
+				// /#hot
+				// *** HOT END ***
+				//
+					*** GET INSPIRED ***
+					_________________________________________________________
+				.container(data-animate='fadeInUpBig')
+					.col-md-12
+						.box.slideshow
+							h3 Get Inspired
+							p.lead Get the inspiration from our world class designers
+							#get-inspired.owl-carousel.owl-theme
+								.item
+									a(href='#')
+										img.img-responsive(src='img/getinspired1.jpg', alt='Get inspired')
+								.item
+									a(href='#')
+										img.img-responsive(src='img/getinspired2.jpg', alt='Get inspired')
+								.item
+									a(href='#')
+										img.img-responsive(src='img/getinspired3.jpg', alt='Get inspired')
+				// *** GET INSPIRED END ***
+				//
+					*** BLOG HOMEPAGE ***
+					_________________________________________________________
+				.box.text-center(data-animate='fadeInUp')
+					.container
+						.col-md-12
+							h3.text-uppercase From our blog
+							p.lead
+								| What's new in the world of fashion? 
+								a(href='blog.html') Check our blog!
+				.container
+					.col-md-12(data-animate='fadeInUp')
+						#blog-homepage.row
+							.col-sm-6
+								.post
+									h4
+										a(href='post.html') Fashion now
+									p.author-category
+										| By 
+										a(href='#') John Slim
+										|  in 
+										a(href='') Fashion and style
+									hr
+									p.intro
+										| Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+										| ultricies mi vitae est. Mauris placerat eleifend leo.
+									p.read-more
+										a.btn.btn-primary(href='post.html') Continue reading
+							.col-sm-6
+								.post
+									h4
+										a(href='post.html') Who is who - example blog post
+									p.author-category
+										| By 
+										a(href='#') John Slim
+										|  in 
+										a(href='') About Minimal
+									hr
+									p.intro
+										| Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+										| ultricies mi vitae est. Mauris placerat eleifend leo.
+									p.read-more
+										a.btn.btn-primary(href='post.html') Continue reading
+						// /#blog-homepage
+				// /.container
+				// *** BLOG HOMEPAGE END ***
+			// /#content
+			//
+				*** FOOTER ***
+				_________________________________________________________
+			#footer(data-animate='fadeInUp')
+				.container
+					.row
+						.col-md-3.col-sm-6
+							h4 Pages
+							ul
+								li
+									a(href='text.html') About us
+								li
+									a(href='text.html') Terms and conditions
+								li
+									a(href='faq.html') FAQ
+								li
+									a(href='contact.html') Contact us
+							hr
+							h4 User section
+							ul
+								li
+									a(href='#', data-toggle='modal', data-target='#login-modal') Login
+								li
+									a(href='register.html') Regiter
+							hr.hidden-md.hidden-lg.hidden-sm
+						// /.col-md-3
+						.col-md-3.col-sm-6
+							h4 Top categories
+							h5 Men
+							ul
+								li
+									a(href='category.html') T-shirts
+								li
+									a(href='category.html') Shirts
+								li
+									a(href='category.html') Accessories
+							h5 Ladies
+							ul
+								li
+									a(href='category.html') T-shirts
+								li
+									a(href='category.html') Skirts
+								li
+									a(href='category.html') Pants
+								li
+									a(href='category.html') Accessories
+							hr.hidden-md.hidden-lg
+						// /.col-md-3
+						.col-md-3.col-sm-6
+							h4 Where to find us
+							p
+								strong Obaju Ltd.
+								br
+								| 13/25 New Avenue
+								br
+								| New Heaven
+								br
+								| 45Y 73J
+								br
+								| England
+								br
+								strong Great Britain
+							a(href='contact.html') Go to contact page
+							hr.hidden-md.hidden-lg
+						// /.col-md-3
+						.col-md-3.col-sm-6
+							h4 Get the news
+							p.text-muted
+								| Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+							form
+								.input-group
+									input.form-control(type='text')
+									span.input-group-btn
+										button.btn.btn-default(type='button') Subscribe!
+								// /input-group
+							hr
+							h4 Stay in touch
+							p.social
+								a.facebook.external(href='#', data-animate-hover='shake')
+									i.fa.fa-facebook
+								a.twitter.external(href='#', data-animate-hover='shake')
+									i.fa.fa-twitter
+								a.instagram.external(href='#', data-animate-hover='shake')
+									i.fa.fa-instagram
+								a.gplus.external(href='#', data-animate-hover='shake')
+									i.fa.fa-google-plus
+								a.email.external(href='#', data-animate-hover='shake')
+									i.fa.fa-envelope
+						// /.col-md-3
+					// /.row
+				// /.container
+			// /#footer
+			// *** FOOTER END ***
+			//
+				*** COPYRIGHT ***
+				_________________________________________________________
+			#copyright
+				.container
+					.col-md-6
+						p.pull-left © 2015 Your name goes here.
+					.col-md-6
+						p.pull-right
+							| Template by 
+							a(href='https://bootstrapious.com/e-commerce-templates') Bootstrapious
+							|  & 
+							a(href='https://fity.cz') Fity
+							// Not removing these links is part of the license conditions of the template. Thanks for understanding :) If you want to use the template without the attribution links, you can do so after supporting further themes development at https://bootstrapious.com/donate
+			// *** COPYRIGHT END ***
+		// /#all
+		//
+			*** SCRIPTS TO INCLUDE ***
+			_________________________________________________________
+		script(src='js/jquery-1.11.0.min.js')
+		script(src='js/bootstrap.min.js')
+		script(src='js/jquery.cookie.js')
+		script(src='js/waypoints.min.js')
+		script(src='js/modernizr.js')
+		script(src='js/bootstrap-hover-dropdown.js')
+		script(src='js/owl.carousel.min.js')
+		script(src='js/front.js')
