@@ -38,9 +38,9 @@ html(lang='en')
                         li
                             a(href='#', data-toggle='modal', data-target='#login-modal') Login
                         li
-                            a(href='register.html') Register
+                            a(href='/register') Register
                         li
-                            a(href='contact.html') Contact
+                            a(href='/contact') Contact
                         li
                             a(href='#') Recently viewed
             #login-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='Login', aria-hidden='true')
@@ -71,7 +71,7 @@ html(lang='en')
         #navbar.navbar.navbar-default.yamm(role='navigation')
             .container
                 .navbar-header
-                    a.navbar-brand.home(href='index.html', data-animate-hover='bounce')
+                    a.navbar-brand.home(href='/', data-animate-hover='bounce')
                         img.hidden-xs(src='img/logo.png', alt='Obaju logo')
                         img.visible-xs(src='img/logo-small.png', alt='Obaju logo')
                         span.sr-only Obaju - go to homepage
@@ -82,14 +82,14 @@ html(lang='en')
                         button.navbar-toggle(type='button', data-toggle='collapse', data-target='#search')
                             span.sr-only Toggle search
                             i.fa.fa-search
-                        a.btn.btn-default.navbar-toggle(href='basket.html')
+                        a.btn.btn-default.navbar-toggle(href='/cart')
                             i.fa.fa-shopping-cart
                             span.hidden-xs 3 items in cart
                 // /.navbar-header
                 #navigation.navbar-collapse.collapse
                     ul.nav.navbar-nav.navbar-left
                         li.active
-                            a(href='index.html') Home
+                            a(href='/') Home
                         li.dropdown.yamm-fw
                             a.dropdown-toggle(href='#', data-toggle='dropdown', data-hover='dropdown', data-delay='200')
                                 | Men 
@@ -226,7 +226,7 @@ html(lang='en')
                                                 h5 Shop
                                                 ul
                                                     li
-                                                        a(href='index.html') Homepage
+                                                        a(href='/') Homepage
                                                     li
                                                         a(href='category.html') Category - sidebar left
                                                     li
@@ -239,7 +239,7 @@ html(lang='en')
                                                 h5 User
                                                 ul
                                                     li
-                                                        a(href='register.html') Register / login
+                                                        a(href='/register') Register / login
                                                     li
                                                         a(href='customer-orders.html') Orders history
                                                     li
@@ -252,7 +252,7 @@ html(lang='en')
                                                 h5 Order process
                                                 ul
                                                     li
-                                                        a(href='basket.html') Shopping cart
+                                                        a(href='/cart') Shopping cart
                                                     li
                                                         a(href='checkout1.html') Checkout - step 1
                                                     li
@@ -277,12 +277,12 @@ html(lang='en')
                                                     li
                                                         a(href='404.html') 404 page
                                                     li
-                                                        a(href='contact.html') Contact
+                                                        a(href='/contact') Contact
                                     // /.yamm-content
                 // /.nav-collapse
                 .navbar-buttons
                     #basket-overview.navbar-collapse.collapse.right
-                        a.btn.btn-primary.navbar-btn(href='basket.html')
+                        a.btn.btn-primary.navbar-btn(href='/cart')
                             i.fa.fa-shopping-cart
                             span.hidden-sm 3 items in cart
                     // /.nav-collapse
@@ -307,7 +307,7 @@ html(lang='en')
                     .col-md-12
                         ul.breadcrumb
                             li
-                                a(href='#') Home
+                                a(href='/') Home
                             li New account / Sign in
                     .col-md-6
                         .box
