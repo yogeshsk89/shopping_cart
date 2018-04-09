@@ -6,6 +6,11 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.post('/loginAction', function(req, res, next){
+
+	console.log(req.body);
+});
+
 router.get('/register', function(req, res, next){
 
 	res.render('register', { title: 'Register' });

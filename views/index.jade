@@ -1,732 +1,453 @@
 doctype html
-html(lang='en')
-  head
-    meta(charset='utf-8')
-    meta(name='robots', content='all,follow')
-    meta(name='googlebot', content='index,follow,snippet,archive')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(name='description', content='Obaju e-commerce template')
-    meta(name='author', content='Ondrej Svestka | ondrejsvestka.cz')
-    meta(name='keywords', content='')
-    title
-      | Obaju : e-commerce template
-    meta(name='keywords', content='')
-    link(href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100', rel='stylesheet', type='text/css')
-    // styles
-    link(href='css/font-awesome.css', rel='stylesheet')
-    link(href='css/bootstrap.min.css', rel='stylesheet')
-    link(href='css/animate.min.css', rel='stylesheet')
-    link(href='css/owl.carousel.css', rel='stylesheet')
-    link(href='css/owl.theme.css', rel='stylesheet')
-    // theme stylesheet
-    link#theme-stylesheet(href='css/style.default.css', rel='stylesheet')
-    // your stylesheet with modifications
-    link(href='css/custom.css', rel='stylesheet')
-    script(src='js/respond.min.js')
-    link(rel='shortcut icon', href='favicon.png')
-  body(ng-app="shopping_cart_app")
-    //
-      *** TOPBAR ***
-      _________________________________________________________
-    #top
-      .container
-        .col-md-6.offer(data-animate='fadeInDown')
-          a.btn.btn-success.btn-sm(href='#', data-animate-hover='shake') Offer of the day
-          a(href='#') Get flat 35% off on orders over $50!
-        .col-md-6(data-animate='fadeInDown')
-          ul.menu
-            li
-              a(href='#', data-toggle='modal', data-target='#login-modal') Login
-            li
-              a(href='/register') Register
-            li
-              a(href='/contact') Contact
-            li
-              a(href='#') Recently viewed
-      #login-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='Login', aria-hidden='true')
-        .modal-dialog.modal-sm
-          .modal-content
-            .modal-header
-              button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
-              h4#Login.modal-title Customer login
-            .modal-body
-              form(action='customer-orders.html', method='post')
-                .form-group
-                  input#email-modal.form-control(type='text', placeholder='email')
-                .form-group
-                  input#password-modal.form-control(type='password', placeholder='password')
-                p.text-center
-                  button.btn.btn-primary
-                    i.fa.fa-sign-in
-                    |  Log in
-              p.text-center.text-muted Not registered yet?
-              p.text-center.text-muted
-                a(href='register.html')
-                  strong Register now
-                | ! It is easy and done in 1 minute and gives you access to special discounts and much more!
-    // *** TOP BAR END ***
-    //
-      *** NAVBAR ***
-      _________________________________________________________
-    #navbar.navbar.navbar-default.yamm(role='navigation')
-      .container
-        .navbar-header
-          a.navbar-brand.home(href='/', data-animate-hover='bounce')
-            img.hidden-xs(src='img/logo.png', alt='Obaju logo')
-            img.visible-xs(src='img/logo-small.png', alt='Obaju logo')
-            span.sr-only Obaju - go to homepage
-          .navbar-buttons
-            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navigation')
-              span.sr-only Toggle navigation
-              i.fa.fa-align-justify
-            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#search')
-              span.sr-only Toggle search
-              i.fa.fa-search
-            a.btn.btn-default.navbar-toggle(href='/cart')
-              i.fa.fa-shopping-cart
-              span.hidden-xs 3 items in cart
-        // /.navbar-header
-        #navigation.navbar-collapse.collapse
-          ul.nav.navbar-nav.navbar-left
-            li.active
-              a(href='/') Home
-            li.dropdown.yamm-fw
-              a.dropdown-toggle(href='#', data-toggle='dropdown', data-hover='dropdown', data-delay='200')
-                | Men 
-                b.caret
-              ul.dropdown-menu
-                li
-                  .yamm-content
-                    .row
-                      .col-sm-3
-                        h5 Clothing
-                        ul
-                          li
-                            a(href='category.html') T-shirts
-                          li
-                            a(href='category.html') Shirts
-                          li
-                            a(href='category.html') Pants
-                          li
-                            a(href='category.html') Accessories
-                      .col-sm-3
-                        h5 Shoes
-                        ul
-                          li
-                            a(href='category.html') Trainers
-                          li
-                            a(href='category.html') Sandals
-                          li
-                            a(href='category.html') Hiking shoes
-                          li
-                            a(href='category.html') Casual
-                      .col-sm-3
-                        h5 Accessories
-                        ul
-                          li
-                            a(href='category.html') Trainers
-                          li
-                            a(href='category.html') Sandals
-                          li
-                            a(href='category.html') Hiking shoes
-                          li
-                            a(href='category.html') Casual
-                          li
-                            a(href='category.html') Hiking shoes
-                          li
-                            a(href='category.html') Casual
-                      .col-sm-3
-                        h5 Featured
-                        ul
-                          li
-                            a(href='category.html') Trainers
-                          li
-                            a(href='category.html') Sandals
-                          li
-                            a(href='category.html') Hiking shoes
-                        h5 Looks and trends
-                        ul
-                          li
-                            a(href='category.html') Trainers
-                          li
-                            a(href='category.html') Sandals
-                          li
-                            a(href='category.html') Hiking shoes
-                  // /.yamm-content
-            li.dropdown.yamm-fw
-              a.dropdown-toggle(href='#', data-toggle='dropdown', data-hover='dropdown', data-delay='200')
-                | Ladies 
-                b.caret
-              ul.dropdown-menu
-                li
-                  .yamm-content
-                    .row
-                      .col-sm-3
-                        h5 Clothing
-                        ul
-                          li
-                            a(href='category.html') T-shirts
-                          li
-                            a(href='category.html') Shirts
-                          li
-                            a(href='category.html') Pants
-                          li
-                            a(href='category.html') Accessories
-                      .col-sm-3
-                        h5 Shoes
-                        ul
-                          li
-                            a(href='category.html') Trainers
-                          li
-                            a(href='category.html') Sandals
-                          li
-                            a(href='category.html') Hiking shoes
-                          li
-                            a(href='category.html') Casual
-                      .col-sm-3
-                        h5 Accessories
-                        ul
-                          li
-                            a(href='category.html') Trainers
-                          li
-                            a(href='category.html') Sandals
-                          li
-                            a(href='category.html') Hiking shoes
-                          li
-                            a(href='category.html') Casual
-                          li
-                            a(href='category.html') Hiking shoes
-                          li
-                            a(href='category.html') Casual
-                        h5 Looks and trends
-                        ul
-                          li
-                            a(href='category.html') Trainers
-                          li
-                            a(href='category.html') Sandals
-                          li
-                            a(href='category.html') Hiking shoes
-                      .col-sm-3
-                        .banner
-                          a(href='#')
-                            img.img.img-responsive(src='img/banner.jpg', alt='')
-                        .banner
-                          a(href='#')
-                            img.img.img-responsive(src='img/banner2.jpg', alt='')
-                  // /.yamm-content
-            li.dropdown.yamm-fw
-              a.dropdown-toggle(href='#', data-toggle='dropdown', data-hover='dropdown', data-delay='200')
-                | Template 
-                b.caret
-              ul.dropdown-menu
-                li
-                  .yamm-content
-                    .row
-                      .col-sm-3
-                        h5 Shop
-                        ul
-                          li
-                            a(href='/') Homepage
-                          li
-                            a(href='category.html') Category - sidebar left
-                          li
-                            a(href='category-right.html') Category - sidebar right
-                          li
-                            a(href='category-full.html') Category - full width
-                          li
-                            a(href='detail.html') Product detail
-                      .col-sm-3
-                        h5 User
-                        ul
-                          li
-                            a(href='/register') Register / login
-                          li
-                            a(href='customer-orders.html') Orders history
-                          li
-                            a(href='customer-order.html') Order history detail
-                          li
-                            a(href='customer-wishlist.html') Wishlist
-                          li
-                            a(href='customer-account.html') Customer account / change password
-                      .col-sm-3
-                        h5 Order process
-                        ul
-                          li
-                            a(href='/cart') Shopping cart
-                          li
-                            a(href='checkout1.html') Checkout - step 1
-                          li
-                            a(href='checkout2.html') Checkout - step 2
-                          li
-                            a(href='checkout3.html') Checkout - step 3
-                          li
-                            a(href='checkout4.html') Checkout - step 4
-                      .col-sm-3
-                        h5 Pages and blog
-                        ul
-                          li
-                            a(href='blog.html') Blog listing
-                          li
-                            a(href='post.html') Blog Post
-                          li
-                            a(href='faq.html') FAQ
-                          li
-                            a(href='text.html') Text page
-                          li
-                            a(href='text-right.html') Text page - right sidebar
-                          li
-                            a(href='404.html') 404 page
-                          li
-                            a(href='/contact') Contact
-                  // /.yamm-content
-        // /.nav-collapse
-        .navbar-buttons
-          #basket-overview.navbar-collapse.collapse.right
-            a.btn.btn-primary.navbar-btn(href='/cart')
-              i.fa.fa-shopping-cart
-              span.hidden-sm 3 items in cart
-          // /.nav-collapse
-          #search-not-mobile.navbar-collapse.collapse.right
-            button.btn.navbar-btn.btn-primary(type='button', data-toggle='collapse', data-target='#search')
-              span.sr-only Toggle search
-              i.fa.fa-search
-        #search.collapse.clearfix
-          form.navbar-form(role='search')
-            .input-group
-              input.form-control(type='text', placeholder='Search')
-              span.input-group-btn
-                button.btn.btn-primary(type='submit')
-                  i.fa.fa-search
-        // /.nav-collapse
-      // /.container
-    // /#navbar
-    // *** NAVBAR END ***
-    #all
-      #content
-        .container
-          .col-md-12
-            #main-slider
-              .item
-                img.img-responsive(src='img/main-slider1.jpg', alt='')
-              .item
-                img.img-responsive(src='img/main-slider2.jpg', alt='')
-              .item
-                img.img-responsive(src='img/main-slider3.jpg', alt='')
-              .item
-                img.img-responsive(src='img/main-slider4.jpg', alt='')
-            // /#main-slider
-        //
-          *** ADVANTAGES HOMEPAGE ***
-          _________________________________________________________
-        #advantages
-          .container
-            .same-height-row
-              .col-sm-4
-                .box.same-height.clickable
-                  .icon
-                    i.fa.fa-heart
-                  h3
-                    a(href='#') We love our customers
-                  p We are known to provide best possible service ever
-              .col-sm-4
-                .box.same-height.clickable
-                  .icon
-                    i.fa.fa-tags
-                  h3
-                    a(href='#') Best prices
-                  p
-                    | You can check that the height of the boxes adjust when longer text like this one is used in one of them.
-              .col-sm-4
-                .box.same-height.clickable
-                  .icon
-                    i.fa.fa-thumbs-up
-                  h3
-                    a(href='#') 100% satisfaction guaranteed
-                  p Free returns on everything for 3 months.
-            // /.row
-          // /.container
-        // /#advantages
-        // *** ADVANTAGES END ***
-        //
-          *** HOT PRODUCT SLIDESHOW ***
-          _________________________________________________________
-        #hot
-          .box
-            .container
-              .col-md-12
-                h2 Hot this week
-          .container
-            .product-slider
-              .item
-                .product
-                  .flip-container
-                    .flipper
-                      .front
-                        a(href='detail.html')
-                          img.img-responsive(src='img/product1.jpg', alt='')
-                      .back
-                        a(href='detail.html')
-                          img.img-responsive(src='img/product1_2.jpg', alt='')
-                  a.invisible(href='detail.html')
-                    img.img-responsive(src='img/product1.jpg', alt='')
-                  .text
-                    h3
-                      a(href='detail.html') Fur coat with very but very very long name
-                    p.price $143.00
-                  // /.text
-                // /.product
-              .item
-                .product
-                  .flip-container
-                    .flipper
-                      .front
-                        a(href='detail.html')
-                          img.img-responsive(src='img/product2.jpg', alt='')
-                      .back
-                        a(href='detail.html')
-                          img.img-responsive(src='img/product2_2.jpg', alt='')
-                  a.invisible(href='detail.html')
-                    img.img-responsive(src='img/product2.jpg', alt='')
-                  .text
-                    h3
-                      a(href='detail.html') White Blouse Armani
-                    p.price
-                      del $280
-                      |  $143.00
-                  // /.text
-                  .ribbon.sale
-                    .theribbon SALE
-                    .ribbon-background
-                  // /.ribbon
-                  .ribbon.new
-                    .theribbon NEW
-                    .ribbon-background
-                  // /.ribbon
-                  .ribbon.gift
-                    .theribbon GIFT
-                    .ribbon-background
-                  // /.ribbon
-                // /.product
-              .item
-                .product
-                  .flip-container
-                    .flipper
-                      .front
-                        a(href='detail.html')
-                          img.img-responsive(src='img/product3.jpg', alt='')
-                      .back
-                        a(href='detail.html')
-                          img.img-responsive(src='img/product3_2.jpg', alt='')
-                  a.invisible(href='detail.html')
-                    img.img-responsive(src='img/product3.jpg', alt='')
-                  .text
-                    h3
-                      a(href='detail.html') Black Blouse Versace
-                    p.price $143.00
-                  // /.text
-                // /.product
-              .item
-                .product
-                  .flip-container
-                    .flipper
-                      .front
-                        a(href='detail.html')
-                          img.img-responsive(src='img/product3.jpg', alt='')
-                      .back
-                        a(href='detail.html')
-                          img.img-responsive(src='img/product3_2.jpg', alt='')
-                  a.invisible(href='detail.html')
-                    img.img-responsive(src='img/product3.jpg', alt='')
-                  .text
-                    h3
-                      a(href='detail.html') Black Blouse Versace
-                    p.price $143.00
-                  // /.text
-                // /.product
-              .item
-                .product
-                  .flip-container
-                    .flipper
-                      .front
-                        a(href='detail.html')
-                          img.img-responsive(src='img/product2.jpg', alt='')
-                      .back
-                        a(href='detail.html')
-                          img.img-responsive(src='img/product2_2.jpg', alt='')
-                  a.invisible(href='detail.html')
-                    img.img-responsive(src='img/product2.jpg', alt='')
-                  .text
-                    h3
-                      a(href='detail.html') White Blouse Versace
-                    p.price $143.00
-                  // /.text
-                  .ribbon.new
-                    .theribbon NEW
-                    .ribbon-background
-                  // /.ribbon
-                // /.product
-              .item
-                .product
-                  .flip-container
-                    .flipper
-                      .front
-                        a(href='detail.html')
-                          img.img-responsive(src='img/product1.jpg', alt='')
-                      .back
-                        a(href='detail.html')
-                          img.img-responsive(src='img/product1_2.jpg', alt='')
-                  a.invisible(href='detail.html')
-                    img.img-responsive(src='img/product1.jpg', alt='')
-                  .text
-                    h3
-                      a(href='detail.html') Fur coat
-                    p.price $143.00
-                  // /.text
-                  .ribbon.gift
-                    .theribbon GIFT
-                    .ribbon-background
-                  // /.ribbon
-                // /.product
-              // /.col-md-4
-              .item
-                .product
-                  .flip-container
-                    .flipper
-                      .front
-                        a(href='detail.html')
-                          img.img-responsive(src='img/product2.jpg', alt='')
-                      .back
-                        a(href='detail.html')
-                          img.img-responsive(src='img/product2_2.jpg', alt='')
-                  a.invisible(href='detail.html')
-                    img.img-responsive(src='img/product2.jpg', alt='')
-                  .text
-                    h3
-                      a(href='detail.html') White Blouse Armani
-                    p.price
-                      del $280
-                      |  $143.00
-                  // /.text
-                  .ribbon.sale
-                    .theribbon SALE
-                    .ribbon-background
-                  // /.ribbon
-                  .ribbon.new
-                    .theribbon NEW
-                    .ribbon-background
-                  // /.ribbon
-                  .ribbon.gift
-                    .theribbon GIFT
-                    .ribbon-background
-                  // /.ribbon
-                // /.product
-              .item
-                .product
-                  .flip-container
-                    .flipper
-                      .front
-                        a(href='detail.html')
-                          img.img-responsive(src='img/product3.jpg', alt='')
-                      .back
-                        a(href='detail.html')
-                          img.img-responsive(src='img/product3_2.jpg', alt='')
-                  a.invisible(href='detail.html')
-                    img.img-responsive(src='img/product3.jpg', alt='')
-                  .text
-                    h3
-                      a(href='detail.html') Black Blouse Versace
-                    p.price $143.00
-                  // /.text
-                // /.product
-            // /.product-slider
-          // /.container
-        // /#hot
-        // *** HOT END ***
-        //
-          *** GET INSPIRED ***
-          _________________________________________________________
-        .container(data-animate='fadeInUpBig')
-          .col-md-12
-            .box.slideshow
-              h3 Get Inspired
-              p.lead Get the inspiration from our world class designers
-              #get-inspired.owl-carousel.owl-theme
-                .item
-                  a(href='#')
-                    img.img-responsive(src='img/getinspired1.jpg', alt='Get inspired')
-                .item
-                  a(href='#')
-                    img.img-responsive(src='img/getinspired2.jpg', alt='Get inspired')
-                .item
-                  a(href='#')
-                    img.img-responsive(src='img/getinspired3.jpg', alt='Get inspired')
-        // *** GET INSPIRED END ***
-        //
-          *** BLOG HOMEPAGE ***
-          _________________________________________________________
-        .box.text-center(data-animate='fadeInUp')
-          .container
-            .col-md-12
-              h3.text-uppercase From our blog
-              p.lead
-                | What's new in the world of fashion? 
-                a(href='blog.html') Check our blog!
-        .container
-          .col-md-12(data-animate='fadeInUp')
-            #blog-homepage.row
-              .col-sm-6
-                .post
-                  h4
-                    a(href='post.html') Fashion now
-                  p.author-category
-                    | By 
-                    a(href='#') John Slim
-                    |  in 
-                    a(href='') Fashion and style
-                  hr
-                  p.intro
-                    | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-                    | ultricies mi vitae est. Mauris placerat eleifend leo.
-                  p.read-more
-                    a.btn.btn-primary(href='post.html') Continue reading
-              .col-sm-6
-                .post
-                  h4
-                    a(href='post.html') Who is who - example blog post
-                  p.author-category
-                    | By 
-                    a(href='#') John Slim
-                    |  in 
-                    a(href='') About Minimal
-                  hr
-                  p.intro
-                    | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-                    | ultricies mi vitae est. Mauris placerat eleifend leo.
-                  p.read-more
-                    a.btn.btn-primary(href='post.html') Continue reading
-            // /#blog-homepage
-        // /.container
-        // *** BLOG HOMEPAGE END ***
-      // /#content
-      //
-        *** FOOTER ***
-        _________________________________________________________
-      #footer(data-animate='fadeInUp')
-        .container
-          .row
-            .col-md-3.col-sm-6
-              h4 Pages
-              ul
-                li
-                  a(href='text.html') About us
-                li
-                  a(href='text.html') Terms and conditions
-                li
-                  a(href='faq.html') FAQ
-                li
-                  a(href='contact.html') Contact us
-              hr
-              h4 User section
-              ul
-                li
-                  a(href='#', data-toggle='modal', data-target='#login-modal') Login
-                li
-                  a(href='register.html') Regiter
-              hr.hidden-md.hidden-lg.hidden-sm
-            // /.col-md-3
-            .col-md-3.col-sm-6
-              h4 Top categories
-              h5 Men
-              ul
-                li
-                  a(href='category.html') T-shirts
-                li
-                  a(href='category.html') Shirts
-                li
-                  a(href='category.html') Accessories
-              h5 Ladies
-              ul
-                li
-                  a(href='category.html') T-shirts
-                li
-                  a(href='category.html') Skirts
-                li
-                  a(href='category.html') Pants
-                li
-                  a(href='category.html') Accessories
-              hr.hidden-md.hidden-lg
-            // /.col-md-3
-            .col-md-3.col-sm-6
-              h4 Where to find us
-              p
-                strong Obaju Ltd.
-                br
-                | 13/25 New Avenue
-                br
-                | New Heaven
-                br
-                | 45Y 73J
-                br
-                | England
-                br
-                strong Great Britain
-              a(href='contact.html') Go to contact page
-              hr.hidden-md.hidden-lg
-            // /.col-md-3
-            .col-md-3.col-sm-6
-              h4 Get the news
-              p.text-muted
-                | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-              form
-                .input-group
-                  input.form-control(type='text')
-                  span.input-group-btn
-                    button.btn.btn-default(type='button') Subscribe!
-                // /input-group
-              hr
-              h4 Stay in touch
-              p.social
-                a.facebook.external(href='#', data-animate-hover='shake')
-                  i.fa.fa-facebook
-                a.twitter.external(href='#', data-animate-hover='shake')
-                  i.fa.fa-twitter
-                a.instagram.external(href='#', data-animate-hover='shake')
-                  i.fa.fa-instagram
-                a.gplus.external(href='#', data-animate-hover='shake')
-                  i.fa.fa-google-plus
-                a.email.external(href='#', data-animate-hover='shake')
-                  i.fa.fa-envelope
-            // /.col-md-3
-          // /.row
-        // /.container
-      // /#footer
-      // *** FOOTER END ***
-      //
-        *** COPYRIGHT ***
-        _________________________________________________________
-      #copyright
-        .container
-          .col-md-6
-            p.pull-left © 2015 Your name goes here.
-          .col-md-6
-            p.pull-right
-              | Template by 
-              a(href='https://bootstrapious.com/e-commerce-templates') Bootstrapious
-              |  & 
-              a(href='https://fity.cz') Fity
-              // Not removing these links is part of the license conditions of the template. Thanks for understanding :) If you want to use the template without the attribution links, you can do so after supporting further themes development at https://bootstrapious.com/donate
-      // *** COPYRIGHT END ***
-    // /#all
-    //
-      *** SCRIPTS TO INCLUDE ***
-      _________________________________________________________
-    script(src='js/jquery-1.11.0.min.js')
-    script(src='js/angular.min.js')
-    script(src='js/bootstrap.min.js')
-    script(src='js/jquery.cookie.js')
-    script(src='js/waypoints.min.js')
-    script(src='js/modernizr.js')
-    script(src='js/bootstrap-hover-dropdown.js')
-    script(src='js/owl.carousel.min.js')
-    script(src='js/front.js')
-    script(src='js/custom_script.js')
+html(lang='en', ng-app="shopping_cart_app")
+	head
+		meta(charset='utf-8')
+		meta(name='robots', content='all,follow')
+		meta(name='googlebot', content='index,follow,snippet,archive')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(name='description', content='Obaju e-commerce template')
+		meta(name='author', content='Ondrej Svestka | ondrejsvestka.cz')
+		meta(name='keywords', content='')
+		title
+			| Obaju : e-commerce template
+		meta(name='keywords', content='')
+		link(href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100', rel='stylesheet', type='text/css')
+		// styles
+		link(href='css/font-awesome.css', rel='stylesheet')
+		link(href='css/bootstrap.min.css', rel='stylesheet')
+		link(href='css/animate.min.css', rel='stylesheet')
+		link(href='css/owl.carousel.css', rel='stylesheet')
+		link(href='css/owl.theme.css', rel='stylesheet')
+		// theme stylesheet
+		link#theme-stylesheet(href='css/style.default.css', rel='stylesheet')
+		// your stylesheet with modifications
+		link(href='css/custom.css', rel='stylesheet')
+		script(src='js/respond.min.js')
+		link(rel='shortcut icon', href='favicon.png')
+	body
+		include ./header
+		#all
+			#content
+				.container
+					.col-md-12
+						#main-slider
+							.item
+								img.img-responsive(src='img/main-slider1.jpg', alt='')
+							.item
+								img.img-responsive(src='img/main-slider2.jpg', alt='')
+							.item
+								img.img-responsive(src='img/main-slider3.jpg', alt='')
+							.item
+								img.img-responsive(src='img/main-slider4.jpg', alt='')
+						// /#main-slider
+				//
+					*** ADVANTAGES HOMEPAGE ***
+					_________________________________________________________
+				#advantages
+					.container
+						.same-height-row
+							.col-sm-4
+								.box.same-height.clickable
+									.icon
+										i.fa.fa-heart
+									h3
+										a(href='#') We love our customers
+									p We are known to provide best possible service ever
+							.col-sm-4
+								.box.same-height.clickable
+									.icon
+										i.fa.fa-tags
+									h3
+										a(href='#') Best prices
+									p
+										| You can check that the height of the boxes adjust when longer text like this one is used in one of them.
+							.col-sm-4
+								.box.same-height.clickable
+									.icon
+										i.fa.fa-thumbs-up
+									h3
+										a(href='#') 100% satisfaction guaranteed
+									p Free returns on everything for 3 months.
+						// /.row
+					// /.container
+				// /#advantages
+				// *** ADVANTAGES END ***
+				//
+					*** HOT PRODUCT SLIDESHOW ***
+					_________________________________________________________
+				#hot
+					.box
+						.container
+							.col-md-12
+								h2 Hot this week
+					.container
+						.product-slider
+							.item
+								.product
+									.flip-container
+										.flipper
+											.front
+												a(href='detail.html')
+													img.img-responsive(src='img/product1.jpg', alt='')
+											.back
+												a(href='detail.html')
+													img.img-responsive(src='img/product1_2.jpg', alt='')
+									a.invisible(href='detail.html')
+										img.img-responsive(src='img/product1.jpg', alt='')
+									.text
+										h3
+											a(href='detail.html') Fur coat with very but very very long name
+										p.price $143.00
+									// /.text
+								// /.product
+							.item
+								.product
+									.flip-container
+										.flipper
+											.front
+												a(href='detail.html')
+													img.img-responsive(src='img/product2.jpg', alt='')
+											.back
+												a(href='detail.html')
+													img.img-responsive(src='img/product2_2.jpg', alt='')
+									a.invisible(href='detail.html')
+										img.img-responsive(src='img/product2.jpg', alt='')
+									.text
+										h3
+											a(href='detail.html') White Blouse Armani
+										p.price
+											del $280
+											|  $143.00
+									// /.text
+									.ribbon.sale
+										.theribbon SALE
+										.ribbon-background
+									// /.ribbon
+									.ribbon.new
+										.theribbon NEW
+										.ribbon-background
+									// /.ribbon
+									.ribbon.gift
+										.theribbon GIFT
+										.ribbon-background
+									// /.ribbon
+								// /.product
+							.item
+								.product
+									.flip-container
+										.flipper
+											.front
+												a(href='detail.html')
+													img.img-responsive(src='img/product3.jpg', alt='')
+											.back
+												a(href='detail.html')
+													img.img-responsive(src='img/product3_2.jpg', alt='')
+									a.invisible(href='detail.html')
+										img.img-responsive(src='img/product3.jpg', alt='')
+									.text
+										h3
+											a(href='detail.html') Black Blouse Versace
+										p.price $143.00
+									// /.text
+								// /.product
+							.item
+								.product
+									.flip-container
+										.flipper
+											.front
+												a(href='detail.html')
+													img.img-responsive(src='img/product3.jpg', alt='')
+											.back
+												a(href='detail.html')
+													img.img-responsive(src='img/product3_2.jpg', alt='')
+									a.invisible(href='detail.html')
+										img.img-responsive(src='img/product3.jpg', alt='')
+									.text
+										h3
+											a(href='detail.html') Black Blouse Versace
+										p.price $143.00
+									// /.text
+								// /.product
+							.item
+								.product
+									.flip-container
+										.flipper
+											.front
+												a(href='detail.html')
+													img.img-responsive(src='img/product2.jpg', alt='')
+											.back
+												a(href='detail.html')
+													img.img-responsive(src='img/product2_2.jpg', alt='')
+									a.invisible(href='detail.html')
+										img.img-responsive(src='img/product2.jpg', alt='')
+									.text
+										h3
+											a(href='detail.html') White Blouse Versace
+										p.price $143.00
+									// /.text
+									.ribbon.new
+										.theribbon NEW
+										.ribbon-background
+									// /.ribbon
+								// /.product
+							.item
+								.product
+									.flip-container
+										.flipper
+											.front
+												a(href='detail.html')
+													img.img-responsive(src='img/product1.jpg', alt='')
+											.back
+												a(href='detail.html')
+													img.img-responsive(src='img/product1_2.jpg', alt='')
+									a.invisible(href='detail.html')
+										img.img-responsive(src='img/product1.jpg', alt='')
+									.text
+										h3
+											a(href='detail.html') Fur coat
+										p.price $143.00
+									// /.text
+									.ribbon.gift
+										.theribbon GIFT
+										.ribbon-background
+									// /.ribbon
+								// /.product
+							// /.col-md-4
+							.item
+								.product
+									.flip-container
+										.flipper
+											.front
+												a(href='detail.html')
+													img.img-responsive(src='img/product2.jpg', alt='')
+											.back
+												a(href='detail.html')
+													img.img-responsive(src='img/product2_2.jpg', alt='')
+									a.invisible(href='detail.html')
+										img.img-responsive(src='img/product2.jpg', alt='')
+									.text
+										h3
+											a(href='detail.html') White Blouse Armani
+										p.price
+											del $280
+											|  $143.00
+									// /.text
+									.ribbon.sale
+										.theribbon SALE
+										.ribbon-background
+									// /.ribbon
+									.ribbon.new
+										.theribbon NEW
+										.ribbon-background
+									// /.ribbon
+									.ribbon.gift
+										.theribbon GIFT
+										.ribbon-background
+									// /.ribbon
+								// /.product
+							.item
+								.product
+									.flip-container
+										.flipper
+											.front
+												a(href='detail.html')
+													img.img-responsive(src='img/product3.jpg', alt='')
+											.back
+												a(href='detail.html')
+													img.img-responsive(src='img/product3_2.jpg', alt='')
+									a.invisible(href='detail.html')
+										img.img-responsive(src='img/product3.jpg', alt='')
+									.text
+										h3
+											a(href='detail.html') Black Blouse Versace
+										p.price $143.00
+									// /.text
+								// /.product
+						// /.product-slider
+					// /.container
+				// /#hot
+				// *** HOT END ***
+				//
+					*** GET INSPIRED ***
+					_________________________________________________________
+				.container(data-animate='fadeInUpBig')
+					.col-md-12
+						.box.slideshow
+							h3 Get Inspired
+							p.lead Get the inspiration from our world class designers
+							#get-inspired.owl-carousel.owl-theme
+								.item
+									a(href='#')
+										img.img-responsive(src='img/getinspired1.jpg', alt='Get inspired')
+								.item
+									a(href='#')
+										img.img-responsive(src='img/getinspired2.jpg', alt='Get inspired')
+								.item
+									a(href='#')
+										img.img-responsive(src='img/getinspired3.jpg', alt='Get inspired')
+				// *** GET INSPIRED END ***
+				//
+					*** BLOG HOMEPAGE ***
+					_________________________________________________________
+				.box.text-center(data-animate='fadeInUp')
+					.container
+						.col-md-12
+							h3.text-uppercase From our blog
+							p.lead
+								| What's new in the world of fashion? 
+								a(href='blog.html') Check our blog!
+				.container
+					.col-md-12(data-animate='fadeInUp')
+						#blog-homepage.row
+							.col-sm-6
+								.post
+									h4
+										a(href='post.html') Fashion now
+									p.author-category
+										| By 
+										a(href='#') John Slim
+										|  in 
+										a(href='') Fashion and style
+									hr
+									p.intro
+										| Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+										| ultricies mi vitae est. Mauris placerat eleifend leo.
+									p.read-more
+										a.btn.btn-primary(href='post.html') Continue reading
+							.col-sm-6
+								.post
+									h4
+										a(href='post.html') Who is who - example blog post
+									p.author-category
+										| By 
+										a(href='#') John Slim
+										|  in 
+										a(href='') About Minimal
+									hr
+									p.intro
+										| Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+										| ultricies mi vitae est. Mauris placerat eleifend leo.
+									p.read-more
+										a.btn.btn-primary(href='post.html') Continue reading
+						// /#blog-homepage
+				// /.container
+				// *** BLOG HOMEPAGE END ***
+			// /#content
+			//
+				*** FOOTER ***
+				_________________________________________________________
+			#footer(data-animate='fadeInUp')
+				.container
+					.row
+						.col-md-3.col-sm-6
+							h4 Pages
+							ul
+								li
+									a(href='text.html') About us
+								li
+									a(href='text.html') Terms and conditions
+								li
+									a(href='faq.html') FAQ
+								li
+									a(href='contact.html') Contact us
+							hr
+							h4 User section
+							ul
+								li
+									a(href='#', data-toggle='modal', data-target='#login-modal') Login
+								li
+									a(href='register.html') Regiter
+							hr.hidden-md.hidden-lg.hidden-sm
+						// /.col-md-3
+						.col-md-3.col-sm-6
+							h4 Top categories
+							h5 Men
+							ul
+								li
+									a(href='category.html') T-shirts
+								li
+									a(href='category.html') Shirts
+								li
+									a(href='category.html') Accessories
+							h5 Ladies
+							ul
+								li
+									a(href='category.html') T-shirts
+								li
+									a(href='category.html') Skirts
+								li
+									a(href='category.html') Pants
+								li
+									a(href='category.html') Accessories
+							hr.hidden-md.hidden-lg
+						// /.col-md-3
+						.col-md-3.col-sm-6
+							h4 Where to find us
+							p
+								strong Obaju Ltd.
+								br
+								| 13/25 New Avenue
+								br
+								| New Heaven
+								br
+								| 45Y 73J
+								br
+								| England
+								br
+								strong Great Britain
+							a(href='contact.html') Go to contact page
+							hr.hidden-md.hidden-lg
+						// /.col-md-3
+						.col-md-3.col-sm-6
+							h4 Get the news
+							p.text-muted
+								| Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+							form
+								.input-group
+									input.form-control(type='text')
+									span.input-group-btn
+										button.btn.btn-default(type='button') Subscribe!
+								// /input-group
+							hr
+							h4 Stay in touch
+							p.social
+								a.facebook.external(href='#', data-animate-hover='shake')
+									i.fa.fa-facebook
+								a.twitter.external(href='#', data-animate-hover='shake')
+									i.fa.fa-twitter
+								a.instagram.external(href='#', data-animate-hover='shake')
+									i.fa.fa-instagram
+								a.gplus.external(href='#', data-animate-hover='shake')
+									i.fa.fa-google-plus
+								a.email.external(href='#', data-animate-hover='shake')
+									i.fa.fa-envelope
+						// /.col-md-3
+					// /.row
+				// /.container
+			// /#footer
+			// *** FOOTER END ***
+			//
+				*** COPYRIGHT ***
+				_________________________________________________________
+			#copyright
+				.container
+					.col-md-6
+						p.pull-left © 2015 Your name goes here.
+					.col-md-6
+						p.pull-right
+							| Template by 
+							a(href='https://bootstrapious.com/e-commerce-templates') Bootstrapious
+							|  & 
+							a(href='https://fity.cz') Fity
+							// Not removing these links is part of the license conditions of the template. Thanks for understanding :) If you want to use the template without the attribution links, you can do so after supporting further themes development at https://bootstrapious.com/donate
+			// *** COPYRIGHT END ***
+		script(src='js/jquery-1.11.0.min.js')
+		script(src='js/angular.js')
+		script(src='js/bootstrap.min.js')
+		script(src='js/jquery.cookie.js')
+		script(src='js/waypoints.min.js')
+		script(src='js/modernizr.js')
+		script(src='js/bootstrap-hover-dropdown.js')
+		script(src='js/owl.carousel.min.js')
+		script(src='js/front.js')
+		script(src='js/custom_script.js')

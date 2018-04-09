@@ -1,7 +1,7 @@
 var path = window.location.origin+"/";
-var my_app = angular.module('shopping_cart_app', ['ngCookies']);
+var my_app = angular.module('shopping_cart_app', []);
 
-app.service('getData',function($http){
+my_app.service('getData',function($http){
 	this.get = function(route,callback){
 		$http.get(path+route).then(function(result){
 			callback(result.data);
@@ -12,8 +12,9 @@ app.service('getData',function($http){
 	};
 });
 
-app.service('postData',function($http){
+my_app.service('postData',function($http){
 	this.post = function(route,formData,callback){
+		alert(formData);
 		$http.post(path+route,formData).then(function(result){
 			callback(result.data);
 		},
@@ -23,8 +24,10 @@ app.service('postData',function($http){
 	};
 });
 
-app.controller('loginController',function($scope,postData,$window){
+my_app.controller('loginController',function($scope,postData,$window){
+
 	$scope.login = function(){
+
 		// console.log($scope.form);
 		if(!$scope.login)
 		{

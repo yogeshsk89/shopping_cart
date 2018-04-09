@@ -8,36 +8,36 @@
 				li
 					a(href='#', data-toggle='modal', data-target='#login-modal') Login
 				li
-					a(href='register.html') Register
+					a(href='/register') Register
 				li
-					a(href='contact.html') Contact
+					a(href='/contact') Contact
 				li
 					a(href='#') Recently viewed
-	#login-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='Login', aria-hidden='true')
+	#login-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='Login', aria-hidden='true', ng-controller="loginController")
 		.modal-dialog.modal-sm
 			.modal-content
 				.modal-header
 					button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
 					h4#Login.modal-title Customer login
 				.modal-body
-					form(action='customer-orders.html', method='post')
+					form(action='javascript:void(0);', method='post')
 						.form-group
-							input#email-modal.form-control(type='text', placeholder='email')
+							input#email-modal.form-control(type='text', placeholder='email', ng-modal="login.email")
 						.form-group
-							input#password-modal.form-control(type='password', placeholder='password')
+							input#password-modal.form-control(type='password', placeholder='password', ng-modal="login.password")
 						p.text-center
-							button.btn.btn-primary
+							button.btn.btn-primary(ng-click="login()")
 								i.fa.fa-sign-in
 								|  Log in
 					p.text-center.text-muted Not registered yet?
 					p.text-center.text-muted
-						a(href='register.html')
+						a(href='/register')
 							strong Register now
 						| ! It is easy and done in 1 minute and gives you access to special discounts and much more!
 #navbar.navbar.navbar-default.yamm(role='navigation')
 	.container
 		.navbar-header
-			a.navbar-brand.home(href='index.html', data-animate-hover='bounce')
+			a.navbar-brand.home(href='/', data-animate-hover='bounce')
 				img.hidden-xs(src='img/logo.png', alt='Obaju logo')
 				img.visible-xs(src='img/logo-small.png', alt='Obaju logo')
 				span.sr-only Obaju - go to homepage
@@ -192,7 +192,7 @@
 										h5 Shop
 										ul
 											li
-												a(href='index.html') Homepage
+												a(href='/') Homepage
 											li
 												a(href='category.html') Category - sidebar left
 											li
@@ -205,7 +205,7 @@
 										h5 User
 										ul
 											li
-												a(href='register.html') Register / login
+												a(href='/register') Register / login
 											li
 												a(href='customer-orders.html') Orders history
 											li
@@ -218,7 +218,7 @@
 										h5 Order process
 										ul
 											li
-												a(href='basket.html') Shopping cart
+												a(href='/Cart') Shopping cart
 											li
 												a(href='checkout1.html') Checkout - step 1
 											li
@@ -243,12 +243,12 @@
 											li
 												a(href='404.html') 404 page
 											li
-												a(href='contact.html') Contact
+												a(href='/contact') Contact
 							// /.yamm-content
 		// /.nav-collapse
 		.navbar-buttons
 			#basket-overview.navbar-collapse.collapse.right
-				a.btn.btn-primary.navbar-btn(href='basket.html')
+				a.btn.btn-primary.navbar-btn(href='/Cart')
 					i.fa.fa-shopping-cart
 					span.hidden-sm 3 items in cart
 			// /.nav-collapse
@@ -265,4 +265,3 @@
 							i.fa.fa-search
 		// /.nav-collapse
 	// /.container
-block content
